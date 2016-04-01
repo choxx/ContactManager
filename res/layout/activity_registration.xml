@@ -1,0 +1,102 @@
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".Registration" >
+
+    <TextView
+        android:id="@+id/uname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="82dp"
+        android:text="Enter Your Email id:"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/upass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/uname"
+        android:layout_below="@+id/uname"
+        android:layout_marginTop="14dp"
+        android:text="Password:"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@android:color/white" />
+
+    <EditText
+        android:id="@+id/etuname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/upass"
+        android:layout_marginLeft="18dp"
+        android:layout_toRightOf="@+id/uname"
+        
+        android:ems="10"
+        android:hint="Enter a username"
+        android:textColor="@android:color/white" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/etupass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/upass"
+        android:layout_alignBottom="@+id/upass"
+        android:layout_alignLeft="@+id/etuname"
+        android:ems="10"
+        android:hint="Enter a password"
+        android:password="true"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:id="@+id/registerme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/condition"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="17dp"
+        android:onClick="register"
+        android:text="Register" />
+
+    <TextView
+        android:id="@+id/condition"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/etupass"
+        android:layout_below="@+id/secAns"
+        android:layout_marginTop="66dp"
+        android:text="By clicking REGISTER you gave this app permission to create a Contact Manager on your device.."
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/showName"
+        android:layout_width="wrap_content"
+        android:layout_height="90dp"
+        android:layout_below="@+id/etupass"
+        android:layout_marginTop="21dp"
+        android:layout_toLeftOf="@+id/etuname"
+        android:text="Enter your Nick Name:"
+        android:textColor="@android:color/white"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/secAns"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/etupass"
+        android:layout_alignTop="@+id/showName"
+        android:layout_toRightOf="@+id/showName"
+        android:ems="10"
+        android:hint="Enter your nick name.."
+        android:textColor="@android:color/white" />
+
+</RelativeLayout>
